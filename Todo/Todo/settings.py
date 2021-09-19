@@ -2,6 +2,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k_ikofc-&+^!1wy(bojmmq60li^iquelyq8ciczvj1c+mq8w5r'
 DEBUG = True
+import os
+
 
 ALLOWED_HOSTS = []
 
@@ -33,7 +35,7 @@ ROOT_URLCONF = 'Todo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
